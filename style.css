@@ -1,0 +1,118 @@
+/* Basic Styles */
+
+body {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    background-image:initial;
+}
+
+.container {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    z-index: 10;
+    display:block;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: #999999;
+    font-size: 2em;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #8f3729;
+}
+
+.gift-container {
+    display: none; /* Hidden until the countdown reaches 0 */
+    margin-top: 30px;
+}
+
+.gift-container h2 {
+    color: #ff6347;
+}
+
+#giftImage {
+    width: 80%;
+    height: 300px;
+    margin-top: 20px;
+    border-radius: 10px;
+    align-items: center;
+}
+
+#giftMessage {
+    color: #ff6347;
+    font-size: 0.6em;
+    margin-top: 20px;
+    text-align: center;
+
+}
+
+/* Balloon Styling */
+.balloon-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 50px;
+    height: 80px;
+    background-color: #f7c1e3;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: rise 10s infinite ease-in;
+}
+
+.balloon1 {
+    background-color: #ff6347;
+}
+
+.balloon2 {
+    background-color: #32cd32;
+}
+
+.balloon3 {
+    background-color: #1e90ff;
+}
+
+.balloon4 {
+    background-color: #ffeb3b;
+}
+
+.balloon5 {
+    background-color: #ff1493;
+}
+
+/* Keyframes for floating balloons */
+@keyframes rise {
+    0% {
+        bottom: -150px;
+        transform: rotate(0deg);
+    }
+    100% {
+        bottom: 100%;
+        transform: rotate(360deg);
+    }
+}
